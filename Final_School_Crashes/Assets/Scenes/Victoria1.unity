@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 863910417}
   - component: {fileID: 863910418}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,24 +627,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60aff919262da0c4ba066ce8d17cd4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgImage: {fileID: 0}
+  bgImage: {fileID: 21300000, guid: ebd65dbb69b098c4a924895a6e426c3e, type: 3}
   puzzles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  gamePuzzles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: f5c95ac249eb31f4b9a9aecca3b6c807, type: 3}
+  - {fileID: 21300000, guid: b2708766f4cb1ee42a93e4eb155b29ce, type: 3}
+  - {fileID: 21300000, guid: 7931d04b5a53ca442a22d67ee8196cf2, type: 3}
+  - {fileID: 21300000, guid: d80b31cfe46de494592efa870f14005e, type: 3}
+  - {fileID: 21300000, guid: 5d87880e44ea4614385df0978394f2df, type: 3}
+  - {fileID: 21300000, guid: ebc5fa05bcf6b124aa36099b598f95df, type: 3}
+  - {fileID: 21300000, guid: 9c2d1a396ad0c964faa4eea0ad6066e1, type: 3}
+  - {fileID: 21300000, guid: c5675fe148d355b4ea4c323ed905d043, type: 3}
+  gamePuzzles: []
   btns: []
 --- !u!1001 &7829920246068216455
 PrefabInstance:
