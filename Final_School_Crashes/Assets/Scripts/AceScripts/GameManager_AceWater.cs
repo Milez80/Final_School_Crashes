@@ -67,5 +67,6 @@ public class GameManager_AceWater : MonoBehaviour
         losePanel.SetActive(true);
         Time.timeScale = 0;
         currentTime = 0f;
+        SceneManager.LoadScene("GameOverScene");
     }
 }
