@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class BallMovement : MonoBehaviour
 {
-    //[SerializedField] put so that other scripts dont use variables
+    //[SerializeField] put so that other scripts dont use variables
     [SerializeField] private float initalSpeed = 10; // controls balls intital speed
     [SerializeField] private float speedIncrease = 0.25f; // increases ball speed over time
     [SerializeField] private TextMeshProUGUI playerScore; // displays and updates player score in game
@@ -18,6 +18,7 @@ public class BallMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Invoke("StartBall", 2f);
     }
 
     private void FixedUpdate()
@@ -34,8 +35,43 @@ public class BallMovement : MonoBehaviour
     private void ResetBall() // gonna be called at the end of each round and put the ball back to the center of the screen, plus remove all velocity and invoke the start ball function
     {
         rb.velocity = new Vector2(0, 0);
-        transform.position = new Vector2(0, 0); // removes/resets all speed\
+        transform.position = new Vector2(0, 0); // removes/resets all speed
         hitCounter = 0;
+        Invoke("StartBall", 2f); // calls the "StartBall" function after 2 seconds to give the player time to reset
+    }
+
+    private void PlayerBounce(Transform myObject)
+    {
+        hitCounter++;
+        Vector2 ballPos = transform.position;
+        Vector2 playerPos = myObject.position; // makes the ball go in a different direction
+
+        float xDirection, yDirection;
+        if (transform.position.x > 0)
+        {
+            xDirection = -1;
+
+        }
+        else
+        {
+            xDirection = 1;
+        }
+        yDirection = (ballPos.y - playerPos.y) / myObject.GetComponent<Collider2D>().bounds.size.y;
+
+        if (yDirection == 0)
+        {
+            yDirection = 0.25f;
+        }
+        rb.velocity = new Vector2(xDirection, yDirection) * (initalSpeed + (speedIncrease * hitCounter));
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (coll)
+        {
+
+        }
     }
 
     void Update()
