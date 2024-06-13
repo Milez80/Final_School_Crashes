@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed20ef60edf119240a5ad3d9298e6099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 7
   isAI: 1
   ball: {fileID: 1803569765}
 --- !u!1 &1261246284
@@ -1210,7 +1210,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1251,6 +1251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initalSpeed: 10
   speedIncrease: 1
+  speed: 200
   playerScore: {fileID: 924629689}
   AIScore: {fileID: 281972577}
 --- !u!1 &1856429340
