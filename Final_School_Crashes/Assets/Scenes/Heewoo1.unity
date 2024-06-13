@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed20ef60edf119240a5ad3d9298e6099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 3
   isAI: 1
   ball: {fileID: 1803569765}
 --- !u!1 &1261246284
@@ -1385,9 +1385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d707600e138d743b0a1c94c8b6ddd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initalSpeed: 10
-  speedIncrease: 20
-  speed: 200
+  initalSpeed: 12
+  speedIncrease: 200.6
+  speed: 300
   playerScore: {fileID: 924629689}
   AIScore: {fileID: 281972577}
 --- !u!1 &1856429340
