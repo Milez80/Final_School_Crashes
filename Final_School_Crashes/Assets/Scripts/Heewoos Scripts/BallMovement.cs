@@ -84,6 +84,7 @@ public class BallMovement : MonoBehaviour
         else if (transform.position.x < 0)
         {
             ResetBall();
+            AIScore.text = (int.Parse(AIScore.text) + 1).ToString();
         }
     }
 
