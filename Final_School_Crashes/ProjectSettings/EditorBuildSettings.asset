@@ -8,4 +8,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Ace1.unity
+    guid: cee88846192fc4bf3b788ecbc0f7b31b
+  - enabled: 1
+    path: Assets/Scenes/Andres1.unity
+    guid: 62d6ca5f6c30f2d4bbff9fc0c4fcba77
+  - enabled: 1
+    path: Assets/Scenes/Boris1.unity
+    guid: 4a92eab36cbf232489b53f4ef3cb272b
+  - enabled: 1
+    path: Assets/Scenes/Heewoo1.unity
+    guid: 36bd59067e46d344bb657001d3136b69
+  - enabled: 1
+    path: Assets/Scenes/Victoria1.unity
+    guid: 284326c6422800b45a9cadfc0d60f5a6
+  - enabled: 1
+    path: Assets/Scenes/Ace2.unity
+    guid: 9a3cb0f68005b4432a3ed46868b4ca00
+  - enabled: 1
+    path: Assets/Scenes/Andres2.unity
+    guid: 41f566c00ae6ac64cadade35cc26c518
+  - enabled: 1
+    path: Assets/Scenes/Boris2.unity
+    guid: 8b526ac5937342749938f5cf1c127ad8
+  - enabled: 1
+    path: Assets/Scenes/Heewoo2.unity
+    guid: 7c26f837c6abe3b4eb0071f64bc84eb0
+  - enabled: 1
+    path: Assets/Scenes/Victoria2.unity
+    guid: b030a1f9e81884e09b7f75dbdbd72d38
   m_configObjects: {}

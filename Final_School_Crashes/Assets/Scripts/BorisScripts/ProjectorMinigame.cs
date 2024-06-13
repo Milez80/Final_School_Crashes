@@ -57,7 +57,7 @@ public class ProjectorMinigame : MonoBehaviour
     void NextMinigame()
     {
         score = 0;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Heewoo1");
     }
 
     void EndGame()

@@ -24,7 +24,7 @@ public class YouWin : MonoBehaviour
     {
         if(collision.TryGetComponent<PlayerController>(out PlayerController player))
         {
-            SceneManager.LoadScene(buildIndex);
+            SceneManager.LoadScene("Boris1");
         }
         
     }
