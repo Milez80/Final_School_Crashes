@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class GameManager_AceWater : MonoBehaviour
 {
     public float currentWater;
     public float WaterPerClick;
     public float winConditionWater = 10000f;
+    public GameObject winPanel;
+    public GameObject losePanel;
 
     public float timeLimitS = 60f;
     public TMP_Text timerText;
@@ -27,6 +30,18 @@ public class GameManager_AceWater : MonoBehaviour
     {
         currentTime += Time.deltaTime;
         timerText.text = "Time: " + (timeLimitS - currentTime).ToString("f0");
+
+        if (currentTime >= timeLimitS)
+        {
+            if (currentWater >= winConditionWater)
+            {
+                ActivateWinPanel();
+            }
+            else
+            {
+                ActivateLosePanel();
+            }
+        }
     }
 
     public void WaterButton()
@@ -35,7 +50,20 @@ public class GameManager_AceWater : MonoBehaviour
 
         if (currentWater >= winConditionWater && currentTime < timeLimitS)
         {
-            //win panel
+            ActivateWinPanel();
         }
+    }
+
+    void ActivateWinPanel()
+    {
+        winPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    void ActivateLosePanel()
+    {
+        losePanel.SetActive(true);
+        Time.timeScale = 0;
+        currentTime = 0f;
     }
 }
