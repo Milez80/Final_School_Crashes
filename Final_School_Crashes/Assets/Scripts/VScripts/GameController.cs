@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
         GetButtons();
         AddListeners();
         AddGamePuzzles();
-        Shuffle (gamePuzzles);
+        Shuffle(gamePuzzles);
         gameGuesses = gamePuzzles.Count / 2;
     }
 
@@ -47,9 +47,9 @@ public class GameController : MonoBehaviour
         int looper = btns.Count;
         int index = 0;
 
-        for (int i = 0;i < looper;i++)
+        for (int i = 0; i < looper; i++)
         {
-            if (index == looper/2)
+            if (index == looper / 2)
             {
                 index = 0;
             }
@@ -62,30 +62,30 @@ public class GameController : MonoBehaviour
     {
         foreach (Button btn in btns)
         {
-            btn.onClick.AddListener(() =>PickAPuzzle());
+            btn.onClick.AddListener(() => PickAPuzzle());
         }
     }
     public void PickAPuzzle()
     {
-        //string name = UnityEngine.EventSystems.current.currentSelectedGameObject.name;
-        //Debug.Log("You are clicking the button named" + name);
+        string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
+        Debug.Log("You are clicking the button named" + name);
 
         if (!firstGuess)
         {
-            //firstGuess = true;
-            //firstGuessIndex = int.Parse(UnityEngine.EventSystems.current.currentSelectedGameObject.name);
-            //firstGuessPuzzle= gamePuzzles[firstGuessIndex].name;
-            //btns[firstGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
+            firstGuess = true;
+            firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            firstGuessPuzzle = gamePuzzles[firstGuessIndex].name;
+            btns[firstGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
         }
 
         else if (!secondGuess)
         {
-            //secondGuess = true;
-            //secondGuessIndex = int.Parse(UnityEngine.EventSystems.current.currentSelectedGameObject.name);
-            //secondGuessPuzzle= gamePuzzles[secondGuessIndex].name;
-            //btns[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
+            secondGuess = true;
+            secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            secondGuessPuzzle = gamePuzzles[secondGuessIndex].name;
+            btns[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
 
-           
+
         }
     }
 
@@ -110,22 +110,27 @@ public class GameController : MonoBehaviour
         firstGuess = secondGuess = false;
     }
 
-        void CheckIfTheGameIsFinished()
+    void CheckIfTheGameIsFinished()
+    {
+
+        countCorrectGuesses++;
+        if (countCorrectGuesses == gameGuesses)
         {
-
-            countCorrectGuesses++;
-
+            Debug.Log("Game Finished");
         }
+
+    }
 
     void Shuffle(List<Sprite> list)
     {
-        //for (int i = 0; < list.Count; i++)
-        //{
-        //    Sprite temp = list[i];
-        //    int randomIndex = Random.Range(0, list.Count);
-        //    list[1] = list[randomIndex];
-        //    list[randomIndex] = temp;
-        //}
+        for (int i = 0; i < list.Count; i++)
+        {
+            Sprite temp = list[i];
+            int randomIndex = Random.Range(0, list.Count);
+            list[1] = list[randomIndex];
+            list[randomIndex] = temp;
+
+        }
+
     }
-    
 }
