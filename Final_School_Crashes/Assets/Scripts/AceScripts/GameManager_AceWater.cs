@@ -22,6 +22,7 @@ public class GameManager_AceWater : MonoBehaviour
     {
         gameObject.SetActive(true);
         Time.timeScale = 1;
+        
 
     }
 
