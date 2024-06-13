@@ -67,23 +67,23 @@ public class GameController : MonoBehaviour
     }
     public void PickAPuzzle()
     {
-        string name = UnityEngine.EventSystems.current.currentSelectedGameObject.name;
-        Debug.Log("You are clicking the button named" + name);
+        //string name = UnityEngine.EventSystems.current.currentSelectedGameObject.name;
+        //Debug.Log("You are clicking the button named" + name);
 
         if (!firstGuess)
         {
-            firstGuess = true;
-            firstGuessIndex = int.Parse(UnityEngine.EventSystems.current.currentSelectedGameObject.name);
-            firstGuessPuzzle= gamePuzzles[firstGuessIndex].name;
-            btns[firstGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
+            //firstGuess = true;
+            //firstGuessIndex = int.Parse(UnityEngine.EventSystems.current.currentSelectedGameObject.name);
+            //firstGuessPuzzle= gamePuzzles[firstGuessIndex].name;
+            //btns[firstGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
         }
 
         else if (!secondGuess)
         {
-            secondGuess = true;
-            secondGuessIndex = int.Parse(UnityEngine.EventSystems.current.currentSelectedGameObject.name);
-            secondGuessPuzzle= gamePuzzles[secondGuessIndex].name;
-            btns[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
+            //secondGuess = true;
+            //secondGuessIndex = int.Parse(UnityEngine.EventSystems.current.currentSelectedGameObject.name);
+            //secondGuessPuzzle= gamePuzzles[secondGuessIndex].name;
+            //btns[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
 
            
         }
@@ -119,13 +119,13 @@ public class GameController : MonoBehaviour
 
     void Shuffle(List<Sprite> list)
     {
-        for (int i = 0; < list.Count; i++)
-        {
-            Sprite temp = list[i];
-            int randomIndex = Random.Range(0, list.Count);
-            list[1] = list[randomIndex];
-            list[randomIndex] = temp;
-        }
+        //for (int i = 0; < list.Count; i++)
+        //{
+        //    Sprite temp = list[i];
+        //    int randomIndex = Random.Range(0, list.Count);
+        //    list[1] = list[randomIndex];
+        //    list[randomIndex] = temp;
+        //}
     }
     
 }
