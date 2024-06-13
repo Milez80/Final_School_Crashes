@@ -5,6 +5,10 @@ using UnityEngine.EventSystems;
 
 public class DropPlace : MonoBehaviour, IDropHandler
 {
+    public string requiredTag;
+    public static int objectsInTrash = 0;
+    public int totalObjects;
+
     public void OnDrop(PointerEventData eventData)
     {
         Chairs draggable = eventData.pointerDrag.GetComponent<Chairs>();
@@ -12,6 +16,11 @@ public class DropPlace : MonoBehaviour, IDropHandler
         {
             draggable.transform.SetParent(transform);
             draggable.transform.position = transform.position;
+            objectsInTrash++;
+            if(objectsInTrash >= totalObjects)
+            {
+                ChairsTimer.Instance.GameWon();
+            }
         }
         else
         {

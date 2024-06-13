@@ -66,7 +66,7 @@ public class ProjectorMinigame : MonoBehaviour
         slider.value = 0;
         score = 0;
         timeText.text = "You Lose";
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("GameOverScene");
     }
 
     void UpdateUI()

@@ -523,8 +523,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tapsForProjector: 10
   score: 0
-  gameTime: 10
-  remainingTime: 10
+  gameTime: 5
+  remainingTime: 5
   startGame: 1
   timeText: {fileID: 1238144277}
   slider: {fileID: 37996467}
