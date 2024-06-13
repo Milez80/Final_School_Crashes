@@ -54,7 +54,7 @@ public class ChairsTimer : MonoBehaviour
     public void GameWon()
     {
         timeIsRunning = false;
-        SceneManager.LoadScene("Boris1");
+        SceneManager.LoadScene("Heewoo2");
     }
 
     public void GameLost()
