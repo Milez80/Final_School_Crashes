@@ -68,9 +68,22 @@ public class BallMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (coll)
+        if (collision.gameObject.name == "Player" || collision.gameObject.name == "AI")
         {
+            PlayerBounce(collision.transform);
+        }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (transform.position.x > 0) // if the ball is on the right side of the screen
+        {
+            ResetBall();
+            playerScore.text = (int.Parse(playerScore.text) + 1).ToString();
+        }
+        else if (transform.position.x < 0)
+        {
+            ResetBall();
         }
     }
 
