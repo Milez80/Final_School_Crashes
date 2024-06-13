@@ -9,6 +9,7 @@ public class BallMovement : MonoBehaviour
     //[SerializeField] put so that other scripts dont use variables
     [SerializeField] private float initalSpeed = 10; // controls balls intital speed
     [SerializeField] private float speedIncrease = 0.25f; // increases ball speed over time
+    [SerializeField] private float speed = 200.0f;
     [SerializeField] private TextMeshProUGUI playerScore; // displays and updates player score in game
     [SerializeField] private TextMeshProUGUI AIScore; // displays and updates AI score in game
 
@@ -29,7 +30,12 @@ public class BallMovement : MonoBehaviour
     private void StartBall() // gonna run at the start of the round and initalize the direction for the ball to travel
     {
         rb.velocity = new Vector2(-1, 0) * (initalSpeed + speedIncrease *hitCounter);
-                              // (-1, 0) will make ball move towards player
+        // (-1, 0) will make ball move towards player
+        float x = Random.value < 0.5f ? -1.0f : 1.0f; // picks a random direction for the ball to launch in
+        float y = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) :
+                                        Random.Range(0.5f, 1.0f);
+        Vector2 direction = new Vector2(x, y);
+        rb.AddForce(direction * this.speed);
     }
 
     private void ResetBall() // gonna be called at the end of each round and put the ball back to the center of the screen, plus remove all velocity and invoke the start ball function

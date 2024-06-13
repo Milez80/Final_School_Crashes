@@ -57,8 +57,8 @@ public class GameManager_AceWater : MonoBehaviour
     void ActivateWinPanel()
     {
         winPanel.SetActive(true);
-        Time.timeScale = 0;
-        SceneManager.LoadScene("Andres1");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Andres2");
     }
 
     void ActivateLosePanel()
