@@ -17,6 +17,7 @@ public class DropPlace : MonoBehaviour, IDropHandler
             draggable.transform.SetParent(transform);
             draggable.transform.position = transform.position;
             objectsInTrash++;
+            Destroy(draggable.gameObject);
             if(objectsInTrash >= totalObjects)
             {
                 ChairsTimer.Instance.GameWon();
