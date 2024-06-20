@@ -1399,3 +1399,4 @@ MonoBehaviour:
   gameTime: 6
   remainingTime: 6
   timeText: {fileID: 937754430}
+  instructions: {fileID: 178028566}
