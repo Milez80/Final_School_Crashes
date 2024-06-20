@@ -24,7 +24,7 @@ public class Wire : MonoBehaviour
     {
         offset = transform.position - MouseWorldPosition();
 
-        wireManager.ConnectWire();
+        
         
     }
 
@@ -57,14 +57,14 @@ public class Wire : MonoBehaviour
         }
     }
 
-    public void ConnectedWire()
-    {
-        connectedWires++;
-        if (connectedWires >= totalWires)
-        {
-            SceneManager.LoadScene("Victoria2");
-        }
-    }
+    //public void ConnectedWire()
+    //{
+    //    connectedWires++;
+    //    if (connectedWires >= totalWires)
+    //    {
+    //        SceneManager.LoadScene("Victoria2");
+    //    }
+    //}
 
     private Vector3 MouseWorldPosition()
     {

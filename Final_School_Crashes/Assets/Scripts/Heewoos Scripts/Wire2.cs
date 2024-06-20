@@ -12,7 +12,7 @@ public class Wire2 : MonoBehaviour
     {
         wireManager.ConnectWire();
 
-        
+        gameObject.SetActive(false);
     }
 
     // Start is called before the first frame update
