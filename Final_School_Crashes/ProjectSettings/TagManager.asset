@@ -3,19 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Interactible
-  - PuzzleButton
-  - Chairs
-  - Target
-<<<<<<< Updated upstream
-  - FallingObject
-=======
-  - WP1
-  - WP2
-  - WP3
-  - WP4
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -25,11 +13,11 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
-  - Enemy
-  - Player
-  - InspectObject
-  - PostProcessing
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
