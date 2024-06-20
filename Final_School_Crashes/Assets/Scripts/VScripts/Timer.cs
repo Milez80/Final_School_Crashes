@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
         else
         {
             // Load your scene here
-            SceneManager.LoadScene(11);
+            SceneManager.LoadScene("11");
         }
     }
 
