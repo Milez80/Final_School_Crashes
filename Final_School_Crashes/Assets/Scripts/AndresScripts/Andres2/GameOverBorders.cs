@@ -2,30 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
-public class ObstacleErrors : MonoBehaviour
+public class GameOverBorders : MonoBehaviour
 {
-
+    public GameObject textBorder;
     private GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Border")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
 
+            textBorder.SetActive(true);
+
+            Invoke("Restart", 3);
         }
-        
-        else if (collision.tag == "Player")
-        {
-            Destroy(player.gameObject);
-            SceneManager.LoadScene("Boris2");
-        }
+
+    }
+
+    public void Restart()
+    {
+    SceneManager.LoadScene("GameOverScene");
     }
 }
