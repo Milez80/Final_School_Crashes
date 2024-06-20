@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObstacleErrors : MonoBehaviour
 {
@@ -22,7 +23,8 @@ public class ObstacleErrors : MonoBehaviour
         
         else if (collision.tag == "Player")
         {
-            Destroy(player.gameObject);   
+            Destroy(player.gameObject);
+            SceneManager.LoadScene("Boris2");
         }
     }
 }
