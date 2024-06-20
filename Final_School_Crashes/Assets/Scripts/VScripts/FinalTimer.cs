@@ -18,7 +18,7 @@ public class FinalTimer : MonoBehaviour
         else
         {
             // Load your scene here
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("WinScreen");
         }
     }
 
