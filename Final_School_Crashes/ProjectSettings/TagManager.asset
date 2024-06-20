@@ -7,6 +7,7 @@ TagManager:
   - Interactible
   - PuzzleButton
   - Chairs
+  - Target
   layers:
   - Default
   - TransparentFX
