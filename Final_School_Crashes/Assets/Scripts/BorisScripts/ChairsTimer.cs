@@ -31,6 +31,7 @@ public class ChairsTimer : MonoBehaviour
     void Start()
     {
         timeIsRunning = true;
+        remainingTime = gameTime;
     }
 
    

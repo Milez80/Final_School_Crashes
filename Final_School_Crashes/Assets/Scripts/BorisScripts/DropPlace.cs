@@ -9,6 +9,10 @@ public class DropPlace : MonoBehaviour, IDropHandler
     public static int objectsInTrash = 0;
     public int totalObjects;
 
+    public void Start()
+    {
+        objectsInTrash = 0;
+    }
     public void OnDrop(PointerEventData eventData)
     {
         Chairs draggable = eventData.pointerDrag.GetComponent<Chairs>();
