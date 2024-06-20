@@ -914,6 +914,7 @@ MonoBehaviour:
   gameTime: 6
   remainingTime: 6
   timeText: {fileID: 1238144277}
+  instructions: {fileID: 1476095086}
 --- !u!4 &1852830555
 Transform:
   m_ObjectHideFlags: 0

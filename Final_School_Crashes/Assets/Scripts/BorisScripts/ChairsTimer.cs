@@ -11,6 +11,7 @@ public class ChairsTimer : MonoBehaviour
     public float remainingTime;
 
     public TMP_Text timeText;
+    public TMP_Text instructions;
 
     private bool timeIsRunning = false;
     public static ChairsTimer Instance;
@@ -48,6 +49,11 @@ public class ChairsTimer : MonoBehaviour
                 GameLost();
             }
         }
+        if(remainingTime <= 4)
+        {
+            Destroy(instructions);
+        }
+
         UpdateUI();
     }
 
