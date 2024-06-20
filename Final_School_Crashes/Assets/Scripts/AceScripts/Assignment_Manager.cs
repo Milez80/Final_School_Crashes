@@ -146,6 +146,6 @@ public class Assignment_Manager : MonoBehaviour
     IEnumerator PlayerWinsCoroutine()
     {
         yield return new WaitForSecondsRealtime(1);
-        SceneManager.LoadScene("Andres1");
+        SceneManager.LoadScene("Victoria2");
     }
 }

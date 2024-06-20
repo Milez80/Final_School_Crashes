@@ -15,7 +15,7 @@ public class WireManager : MonoBehaviour
         connectedWires++;
         if (connectedWires >= totalWires)
         {
-            SceneManager.LoadScene("Victoria2");
+            SceneManager.LoadScene("Andres1");
         }
     }
 
