@@ -195,8 +195,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.02161026
+        value: 0.51708794
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -493,8 +493,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.007858276
+        value: 0.51709366
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -776,7 +776,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.51709366
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1267,7 +1267,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: abe4742002b69894090697e49e296b64, type: 2}
+  - {fileID: 2100000, guid: 360add40efbb0e144a4209f191a9a63a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1360,8 +1360,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37, y: 317}
-  m_SizeDelta: {x: 573.6793, y: 179.9035}
+  m_AnchoredPosition: {x: 37, y: 352}
+  m_SizeDelta: {x: 920.46, y: 179.9035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020113569
 MonoBehaviour:
@@ -1383,7 +1383,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click on the matching wire-end to complete the circuit
+  m_text: From left to right connect the wires and then click on the matching wire-end
+    to complete the circuit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1648,7 +1649,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: abe4742002b69894090697e49e296b64, type: 2}
+  - {fileID: 2100000, guid: 7384352c65e9e6846aec9eb2fb21adf2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1759,7 +1760,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: abe4742002b69894090697e49e296b64, type: 2}
+  - {fileID: 2100000, guid: 86971b4eea89c924fbb918ace2f107f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1889,8 +1890,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.015716553
+        value: 0.51709366
         inSlope: 0
         outSlope: 0
         tangentMode: 0
