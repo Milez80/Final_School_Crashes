@@ -23,7 +23,7 @@ public class GameOverBorders : MonoBehaviour
 
             textBorder.SetActive(true);
 
-            Invoke("Restart", 3);
+            Invoke("Restart", 10);
         }
 
     }
