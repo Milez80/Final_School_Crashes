@@ -23,8 +23,11 @@ public class SpawnObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Spawn();
-        spawnTime = Time.time + timeBetweenSpawn;
+        if (Time.time > spawnTime)
+        {
+            Spawn();
+            spawnTime = Time.time + timeBetweenSpawn;
+        }
     }
 
     void Spawn()
