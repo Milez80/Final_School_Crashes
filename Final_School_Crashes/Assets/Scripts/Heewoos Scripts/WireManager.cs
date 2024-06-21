@@ -7,7 +7,7 @@ public class WireManager : MonoBehaviour
 {
 
     public int totalWires = 4;
-    [SerializeField] private int connectedWires = 0;
+    private int connectedWires = 0;
     
 
     public void ConnectWire()

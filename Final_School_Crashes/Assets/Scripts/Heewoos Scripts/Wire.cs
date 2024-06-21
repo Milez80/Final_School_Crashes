@@ -12,7 +12,9 @@ public class Wire : MonoBehaviour
     Vector3 offset;
 
     public int totalWires = 4;
-    [SerializeField] private int connectedWires = 0;
+    private int connectedWires = 0;
+    
+    
     public WireManager wireManager;
 
     private void Start()
@@ -49,6 +51,8 @@ public class Wire : MonoBehaviour
                 line.SetPosition(0, hitInfo.transform.position);
                 transform.gameObject.GetComponent<Collider>().enabled = false;
 
+                wireManager.ConnectWire();
+
             }
             else
             {
@@ -62,7 +66,7 @@ public class Wire : MonoBehaviour
     //    connectedWires++;
     //    if (connectedWires >= totalWires)
     //    {
-    //        SceneManager.LoadScene("Victoria2");
+    //        SceneManager.LoadScene("Andres1");
     //    }
     //}
 
